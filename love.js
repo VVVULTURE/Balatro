@@ -14078,6 +14078,7 @@ var Love = (function() {
       noExitRuntime = true;
       run();
       if (typeof ENVIRONMENT_IS_PTHREAD === "undefined" || !ENVIRONMENT_IS_PTHREAD) {
+        window.FS = FS;
         Module.addRunDependency("IDBFS_sync");
         FS.mkdir("/home/web_user/love");
         FS.mount(IDBFS, {}, "/home/web_user/love");
